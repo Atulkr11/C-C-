@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+class faculty
+{
+   
+    protected:
+       string course;
+    
+    public:
+       void setCourse()
+       {
+           course="CAP202";
+       }
+       void getCourse()
+       {
+           cout<<course<<endl;
+       }
+};
+class D2001G1:public faculty
+{
+    
+  
+    public:
+       string group1;
+       void setGroup1()
+       {
+           group1="D2001G1";
+       }
+       void getGroup1()
+       {
+           cout<<group1<<endl;
+           cout<<course<<endl;
+       }
+};
+class D2001G2:public faculty
+{
+   public:
+       string group2;
+       void setGroup2()
+       {
+           group2="D2001G2";
+       }
+       void getGroup2()
+       {
+           cout<<group2<<endl;
+           cout<<course<<endl;
+       }
+};
+
+int main()
+{
+   D2001G1 G1;
+   D2001G2 G2;
+   G1.setGroup1();
+   G1.setCourse();
+   G2.setCourse();
+   G1.getGroup1();
+   G2.setGroup2();
+   G2.getGroup2();
+   
+   
+    return 0;
+}
