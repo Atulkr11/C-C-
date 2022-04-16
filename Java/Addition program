@@ -1,0 +1,18 @@
+import java.io.Console;
+class Addition
+{
+public static void main(String args[])
+{
+float a,b,c;
+String s;
+Console in=System.console();
+System.out.print("Input 1st number:");
+s=in.readLine();
+a=Float.parseFloat(s);
+System.out.print("Input 2nd number:");
+s=in.readLine();
+b=Float.parseFloat(s);
+c=a+b;
+System.out.println("Addition="+c);
+}
+}
