@@ -1,0 +1,15 @@
+import java.io.Console;
+class Circle
+{
+public static void main(String args[])
+{
+float r,a;
+String s;
+Console in=System.console();
+System.out.print("Enter radius:");
+s=in.readLine();
+r=Float.parseFloat(s);
+a=3.14F*r*r;
+System.out.println("Area="+a);
+}
+}
