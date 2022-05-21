@@ -1,0 +1,44 @@
+import java.awt.*;
+class Blink extends Frame implements Runnable
+{
+Label lb = new Label("This is blinking text");
+Thread th;
+int b;
+Blink()
+{
+setLayout(new FlowLayout());
+setFont(new Font("Arial",Font.BOLD,30));
+setForeground(Color.red);
+add(lb);
+setSize(600,600);
+setVisible(true);
+th = new Thread(this);
+th.start();
+}
+public void run()
+{
+while(true)
+{
+if(b==0)
+{
+lb.setVisible(false);
+b=1;
+}
+else if(b==1)
+{
+lb.setVisible(true);
+b=0;
+}
+try
+{
+Thread.sleep(200);
+}
+catch(InterruptedException e)
+{}
+}
+}
+public static void main(String args[])
+{
+new Blink();
+}
+}
