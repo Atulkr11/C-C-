@@ -1,0 +1,67 @@
+import java.util.*;
+class AddMatrix
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+int[][] A=new int[3][3];
+int[][] B=new int[3][3];
+int[][] C=new int[3][3];
+int i,j;
+System.out.println("Input values for 1st 3x3 matrix");
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+System.out.print("Input for row "+(i+1)+" & col "+(j+1)+":");
+A[i][j]=in.nextInt();
+}
+}
+System.out.println("Input values for 2nd 3x3 matrix");
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+System.out.print("Input for row "+(i+1)+" & col "+(j+1)+":");
+B[i][j]=in.nextInt();
+}
+}
+
+System.out.println("1st 3x3 Matrix");
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+System.out.print(A[i][j]+"  ");
+}
+System.out.println();
+}
+System.out.println("2nd 3x3 Matrix");
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+System.out.print(B[i][j]+"  ");
+}
+System.out.println();
+}
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+C[i][j]=A[i][j]+B[i][j];
+}
+}
+//Addition
+System.out.println("Addition of 3x3 matrix");
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+System.out.print(C[i][j]+"  ");
+}
+System.out.println();
+}
+}
+}
+
