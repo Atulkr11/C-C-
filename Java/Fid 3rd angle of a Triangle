@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Angle
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+float a,b;
+System.out.print("Enter 1st angle:");
+a=sc.nextFloat();
+System.out.print("Enter 2nd angle:");
+b=sc.nextFloat();
+System.out.println("3rd angle="+((180-(a+b))));
+}
+}
