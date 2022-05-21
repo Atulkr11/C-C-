@@ -1,0 +1,38 @@
+import java.util.*;
+class Book
+{
+private int bookcode;
+private String name;
+private float price;
+private String edition;
+void getdata()
+{
+Scanner in=new Scanner(System.in);
+System.out.print("Book Code:");
+bookcode=in.nextInt();
+System.out.print("Name:");
+name=in.next();
+System.out.print("Price:");
+price=in.nextFloat();
+System.out.print("Edition:");
+edition=in.next();
+}
+void print()
+{
+System.out.println("Book Code="+bookcode);
+System.out.println("Name="+name);
+System.out.println("Price="+price);
+System.out.println("Edition="+edition);
+}
+}
+class BookDetails
+{
+public static void main(String k[])
+{
+Book B=new Book();
+System.out.println("Input details of book");
+B.getdata();
+System.out.println("Details of book");
+B.print();
+}
+} 
