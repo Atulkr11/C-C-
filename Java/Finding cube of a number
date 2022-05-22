@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.awt.event.*;
+class CubeDemo extends Frame implements ActionListener
+{
+Label lb1 = new Label("Input a number ");
+Label lb2 = new Label("Cube ");
+Button btn1 = new Button("Click Me");
+Button btn2 = new Button("Close");
+TextField tf1 = new TextField(10);
+TextField tf2 = new TextField(10);
+CubeDemo()
+{
+setLayout(new GridLayout(3,2,10,10));
+setFont(new Font("Arial",Font.BOLD,20));
+setBackground(Color.cyan);
+add(lb1);add(tf1);
+add(btn1);add(btn2);
+add(lb2);add(tf2);
+btn1.addActionListener(this);
+btn2.addActionListener(this);
+setSize(400,200);
+setVisible(true);
+}
+public void actionPerformed(ActionEvent e)
+{
+float n,r;
+if(e.getSource()==btn1)
+{
+n = Float.parseFloat(tf1.getText());
+r=n*n*n;
+tf2.setText(String.valueOf(r));
+}
+else if(e.getSource()==btn2)
+System.exit(0);
+}
+
+public static void main(String args[])
+{
+new CubeDemo();
+}
+}
+
+
+
+
