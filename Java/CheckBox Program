@@ -1,0 +1,22 @@
+import java.awt.*;
+class CheckboxDemo extends Frame
+{
+Label lb1=new Label("Select News Channel");
+Checkbox cb1=new Checkbox("Aaj Tak");
+Checkbox cb2=new Checkbox("Zee News",true);
+Checkbox cb3=new Checkbox("NDTV");
+Checkbox cb4=new Checkbox("BBC",true);
+CheckboxDemo()
+{
+setLayout(new GridLayout(5,1));
+setFont(new Font("Arial",Font.BOLD,20));
+setBackground(Color.cyan);
+add(lb1);add(cb1);add(cb2);add(cb3);add(cb4);
+setSize(400,300);
+setVisible(true);
+}
+public static void main(String k[])
+{
+CheckboxDemo D=new CheckboxDemo();
+}
+}
