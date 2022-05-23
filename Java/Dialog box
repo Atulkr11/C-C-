@@ -1,0 +1,45 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+class DialogDemo extends JFrame implements ActionListener
+{
+JLabel lb = new JLabel("Password");
+JPasswordField pass = new JPasswordField();
+JButton btn = new JButton("Click Here");
+DialogDemo()
+{
+setLayout(null);
+lb.setBounds(50,50,100,40);
+pass.setBounds(150,50,200,30);
+btn.setBounds(100,100,100,40);
+add(lb);add(pass);add(btn);
+btn.addActionListener(this);
+setSize(400,400);
+setVisible(true);
+}
+public void actionPerformed(ActionEvent e)
+{
+String s  = pass.getText();
+int ch;
+if(s.equals("Vikas"))
+{
+ch=JOptionPane.showConfirmDialog(null,"Your Password is correct. Proceed ?");
+if(ch==JOptionPane.YES_OPTION)
+btn.setBackground(Color.green);
+else if(ch==JOptionPane.NO_OPTION)
+btn.setBackground(Color.red);
+}
+else
+{
+JOptionPane.showConfirmDialog(null,"Your Password is incorrect","XYZ",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+pass.requestFocus();
+}
+
+}
+public static void main(String args[])
+{
+new DialogDemo();
+}
+}
+
