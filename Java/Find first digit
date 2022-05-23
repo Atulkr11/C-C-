@@ -1,0 +1,26 @@
+import java.util.*;
+class FindFirstDigit
+{
+public static void main(String k[])
+{
+int[] x=new int[10];
+int n,i;
+Scanner in=new Scanner(System.in);
+System.out.println("Enter 10-whole numbers:");
+for(i=0;i<=9;i++)
+{
+System.out.print("Number"+(i+1)+":");
+x[i]=in.nextInt();
+}
+System.out.println("Number	1st Digit");
+for(i=0;i<=9;i++)
+{
+n=x[i];
+while(n>9)
+{
+n=n/10;
+}
+System.out.println(+x[i]+"	"+(n%10));
+}
+}
+}
