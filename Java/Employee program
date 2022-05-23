@@ -1,0 +1,38 @@
+import java.util.*;
+class Employee
+{
+private int eno;
+private String name;
+private float sal;
+private String dob;
+void getdata()
+{
+Scanner in=new Scanner(System.in);
+System.out.print("Employee No:");
+eno=in.nextInt();
+System.out.print("Name:");
+name=in.next();
+System.out.print("Salery:");
+sal=in.nextFloat();
+System.out.print("DOB:");
+dob=in.next();
+}
+void print()
+{
+System.out.println("Employee No.="+eno);
+System.out.println("Name="+name);
+System.out.println("Salery="+sal);
+System.out.println("DOB="+dob);
+}
+}
+class Emp
+{
+public static void main(String k[])
+{
+Employee E=new Employee();
+System.out.println("Input details of employee");
+E.getdata();
+System.out.println("Details of employee");
+E.print();
+}
+} 
