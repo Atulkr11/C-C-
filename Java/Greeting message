@@ -1,0 +1,14 @@
+import java.io.Console;
+class Greeting
+{
+public static void main(String args[])
+{
+Console in =System.console();
+String str;
+System.out.print("Input your name:");
+str=in.readLine();
+System.out.println("Hello!"+str);
+System.out.println("Good Afternoon");
+}
+}
+
