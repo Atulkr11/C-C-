@@ -1,0 +1,71 @@
+import java.awt.*;
+import java.awt.event.*;
+class FocusDemo extends Frame implements FocusListener
+{
+Label lb1 = new Label("Phy");
+Label lb2 = new Label("Chem");
+Label lb3 = new Label("Math");
+TextField tf1 = new TextField(20);
+TextField tf2 = new TextField(20);
+TextField tf3 = new TextField(20);
+Button btn1 = new Button("OK");
+Button btn2 = new Button("Cencel");
+FocusDemo()
+{
+setLayout(new GridLayout(4,2,10,10));
+setFont(new Font("Arial",Font.BOLD,20));
+add(lb1);add(tf1);
+add(lb2);add(tf2);
+add(lb3);add(tf3);
+add(btn1);add(btn2);
+tf1.addFocusListener(this);
+tf2.addFocusListener(this);
+tf3.addFocusListener(this);
+setSize(400,250);
+setVisible(true);
+tf1.setText("0");
+tf2.setText("0");
+tf3.setText("0");
+
+}
+public void focusLost(FocusEvent e)
+{
+int m;
+	if(e.getSource()==tf1)
+	{
+	m=Integer.parseInt(tf1.getText());
+	if(m<0 || m>100)
+	{
+	tf1.setText("Plz enter marks in range 0-100");
+	tf1.requestFocus();
+	}
+	}
+	else if(e.getSource()==tf2)
+	{
+	m=Integer.parseInt(tf2.getText());
+	if(m<0 || m>100)
+	{
+	tf2.setText("Plz enter marks in range 0-100");
+	tf2.requestFocus();
+	}
+	}
+	else if(e.getSource()==tf3)
+	{
+	m=Integer.parseInt(tf3.getText());
+	if(m<0 || m>100)
+	{
+	tf3.setText("Plz enter marks in range 0-100");
+	tf3.requestFocus();
+	}
+	}
+}
+public void focusGained(FocusEvent e)
+{}
+public static void main(String args[])
+{
+new FocusDemo();
+}
+}
+
+
+
