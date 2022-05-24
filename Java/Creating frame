@@ -1,0 +1,11 @@
+import java.awt.*;
+class FrameDemo
+{
+public static void main(String k[])
+{
+Frame F=new Frame("This is testing frame");
+F.setSize(600,400);
+F.setBackground(Color.yellow);
+F.setVisible(true);
+}
+}
