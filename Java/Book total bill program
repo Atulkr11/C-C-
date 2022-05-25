@@ -1,0 +1,50 @@
+import java.util.*;
+class Book
+{
+private int bid;
+private String name;
+private float mrp;
+private float dis;
+public float bill;
+void getdata()
+{
+Scanner in=new Scanner(System.in);
+System.out.print("Input Bookid:");
+bid=in.nextInt();
+System.out.print("Name:");
+name=in.next();
+System.out.print("Price:");
+mrp=in.nextFloat();
+}
+void print()
+{
+dis=mrp*10/100;
+bill=mrp-dis;
+System.out.println(bid+"\t"+name+"\t"+mrp+"\t"+dis+"\t"+bill);
+}
+}
+class JantaBook
+{
+public static void main(String k[])
+{
+Book[] B=new Book[5];
+int i;
+float gt=0;
+System.out.println("Input details of 5-book");
+for(i=0;i<=4;i++)
+{
+B[i]=new Book();
+B[i].getdata();
+}
+System.out.println("Sr.No.  Bookid  Name  \tMrp  \t10% Dis Net Bill");
+System.out.println("----------------------------------------------------");
+for(i=0;i<=4;i++)
+{
+System.out.print((i+1)+"\t");
+B[i].print();
+gt=gt+B[i].bill;
+}
+System.out.println("---------------------------------------------------");
+System.out.println("\t\t Grand Total="+gt);
+}
+}
