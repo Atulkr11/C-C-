@@ -1,0 +1,67 @@
+import java.awt.*;
+import java.awt.event.*;
+class KeyDemo extends Frame implements KeyListener
+{
+Label lb1 = new Label("Phy");
+Label lb2 = new Label("Chem");
+Label lb3 = new Label("Math");
+Label lb4 = new Label("Press F1 to change colour");
+
+TextField tf1 = new TextField(20);
+TextField tf2 = new TextField(20);
+TextField tf3 = new TextField(20);
+Button btn1 = new Button("OK");
+Button btn2 = new Button("Cancel");
+KeyDemo()
+{
+setLayout(new GridLayout(5,2,10,10));
+setFont(new Font("Arial",Font.BOLD,20));
+add(lb1);add(tf1);
+add(lb2);add(tf2);
+add(lb3);add(tf3);
+add(btn1);add(btn2);
+add(lb4);
+tf1.addKeyListener(this);
+tf2.addKeyListener(this);
+tf3.addKeyListener(this);
+setSize(550,250);
+setVisible(true);
+tf1.setText("0");
+tf2.setText("0");
+tf3.setText("0");
+
+}
+public void keyPressed(KeyEvent e)
+{
+	if(e.getKeyCode() ==KeyEvent.VK_F1)
+	{
+	if(e.getSource()==tf1)
+	tf1.setBackground(Color.red);
+	else if(e.getSource()==tf2)
+	tf2.setBackground(Color.red);
+	else if(e.getSource()==tf3)
+	tf3.setBackground(Color.red);
+	}
+	if(e.getKeyCode()==KeyEvent.VK_ENTER)
+	{
+	if(e.getSource()==tf1)
+	tf2.requestFocus();
+	else if(e.getSource()==tf2)
+	tf3.requestFocus();
+	else if(e.getSource()==tf3)
+	btn1.requestFocus();
+	}
+}	
+public void keyReleased(KeyEvent e)
+{}
+public void keyTyped(KeyEvent e)
+{}
+
+public static void main(String args[])
+{
+new KeyDemo();
+}
+}
+
+
+
