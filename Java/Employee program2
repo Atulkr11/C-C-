@@ -1,0 +1,29 @@
+class Employee
+{
+private int age,sal;
+Employee()
+{
+age=24;
+sal=10000;
+}
+Employee(int a,int s)
+{
+age=a;
+sal=s;
+}
+void print()
+{
+System.out.println("Age="+age);
+System.out.println("Salary="+sal);
+}
+}
+class MyEmp
+{
+public static void main(String k[])
+{
+Employee E1=new Employee(20,7000);
+Employee E2=new Employee();
+E1.print();
+E2.print();
+}
+}
