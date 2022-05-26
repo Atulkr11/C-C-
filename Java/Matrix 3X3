@@ -1,0 +1,28 @@
+import java.util.*;
+class Matrix
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+int[][] mat=new int[3][3];
+int i,j;
+System.out.println("Input values for a 3x3 matrix");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+System.out.print("Values for row "+(i+1) +" & col "+(j+1) +":");
+mat[i][j]=in.nextInt();
+}
+}
+System.out.println("3x3 Matrix");
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+System.out.print(mat[i][j]+"  ");
+}
+System.out.println();
+}
+}
+}
