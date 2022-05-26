@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Minimum
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+int a,b,c,min;
+System.out.print("Input 3 numbers:");
+a=in.nextInt();
+b=in.nextInt();
+c=in.nextInt();
+if(a<b && a<c)
+min=a;
+else if(b<c && b<a)
+min=b;
+else
+min=c;
+System.out.print("Minimum value="+min);
+}
+}
