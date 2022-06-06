@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Power
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+double a,b,p;
+System.out.println("Input base & Exponent:");
+a=in.nextDouble();
+b=in.nextDouble();
+p=Math.pow(a,b);
+System.out.println("Power="+p);
+}
+}
