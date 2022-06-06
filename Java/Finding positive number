@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Positive
+{
+public static void main(String k[])
+{
+Scanner in=new Scanner(System.in);
+System.out.print("Input a whole number:");
+int a=in.nextInt();
+if(a>0)
+System.out.print(a+"is positive number.");
+else if(a<0)
+System.out.print(a+"is negative number.");
+else
+System.out.print("Number is zero.");
+}
+}
