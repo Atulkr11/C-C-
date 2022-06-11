@@ -1,0 +1,36 @@
+import java.awt.*;
+class MenuDemo extends Frame
+{
+MenuBar mb=new MenuBar();
+Menu file=new Menu("File");
+Menu file=new Menu("Format");
+Menu file=new Menu("Colour");
+MenuItem i1=new MenuItem("New");
+MenuItem i2=new MenuItem("Save");
+MenuItem i3=new MenuItem("SaveAs..");
+MenuItem i4=new MenuItem("Exit");
+MenuItem i5=new MenuItem("Red");
+MenuItem i6=new MenuItem("Green");
+MenuItem i7=new MenuItem("Blue");
+MenuDemo()
+{
+file.add(i1);
+file.add(i2);
+file.add(i3);
+file.addSeparator();
+file.add(i4);
+colour.add(i5);
+colour.add(i6);
+colour.add(i7);
+Format.add(colour);
+mb.add(file);
+mb.add(Format);
+setMenuBar(mb);
+setSize(800,800);
+setVisible(true);
+}
+public static void main(String k[])
+{
+new MenuDemo();
+}
+}
