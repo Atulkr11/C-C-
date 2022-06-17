@@ -1,0 +1,22 @@
+import java.awt.*;
+class RadioDemo extends Frame
+{
+Label lb=new Label("Travel");
+CheckboxGroup cbg=new CheckboxGroup();
+Checkbox rb1=new Checkbox("Cycle",cbg,false);
+Checkbox rb2=new Checkbox("Auto Ricksaw",cbg,true);
+Checkbox rb3=new Checkbox("Bus",cbg,false);
+Checkbox rb4=new Checkbox("Train",cbg,false);
+RadioDemo()
+{
+setLayout(new GridLayout(5,1));
+setFont(new Font("Arial",Font.BOLD,20));
+add(lb);add(rb1);add(rb2);add(rb3);add(rb4);
+setSize(400,400);
+setVisible(true);
+}
+public static void main(String k[])
+{
+new RadioDemo();
+}
+}
