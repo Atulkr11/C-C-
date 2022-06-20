@@ -1,0 +1,22 @@
+import java.util.*;
+class Reverse
+{
+public static void main(String args[])
+{
+int n,r,rev=0;
+int sum=0;
+Scanner sc=new Scanner(System.in);
+System.out.print("Input value of n:");
+n=sc.nextInt();
+do
+{
+r=n%10;
+rev=rev*10+r;
+n=n/10;
+sum=sum+r;
+}
+while(n>0);
+System.out.println("Reverse="+rev);
+System.out.println("Sum of digit="+sum);
+}
+}
