@@ -1,0 +1,21 @@
+import java.util.*;
+class ReverseA
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+int[] n=new int[10];
+int i;
+System.out.println("Enter 10 numbers:");
+for(i=0;i<=9;i++)
+{
+System.out.print("Number "+(i+1)+":");
+n[i]=in.nextInt();
+}
+System.out.print("Reverse:");
+for(i=9;i>=0;i--)
+{
+System.out.print(+n[i]+"  ");
+}
+}
+}
