@@ -1,0 +1,26 @@
+import java.awt.*;
+class ScrollingDemo extends Frame
+{
+Label lb=new Label("Select Course");
+List cs=new List(4,true);
+ScrollingDemo()
+{
+setLayout(new FlowLayout());
+setFont(new Font("Arial",Font.BOLD,30));
+setBackground(Color.red);
+cs.add("BCA");
+cs.add("DCA");
+cs.add("MCA");
+cs.add("BBA");
+cs.add("MBA");
+add(lb);
+add(cs);
+cs.select(2);
+setSize(400,400);
+setVisible(true);
+}
+public static void main(String k[])
+{
+new ScrollingDemo();
+}
+}
