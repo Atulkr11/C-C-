@@ -1,0 +1,21 @@
+//Print Sum of cube;
+import java.util.Scanner;
+class SCube
+{
+public static void main(String args[])
+{
+Scanner in=new Scanner(System.in);
+int n,s=0;
+System.out.print("Input n-term:");
+n=in.nextInt();
+for(int i=1;i<=n;i++)
+{
+s+=i*i*i;
+if(i<n)
+System.out.print(i+"^3" + "+");
+else
+System.out.print(i+"^3" + "=");
+}
+System.out.print(s);
+}
+}
