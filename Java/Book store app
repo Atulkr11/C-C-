@@ -1,0 +1,50 @@
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+public class ShardaBook extends Applet implements ActionListener
+{
+Label lb1= new Label("Janta Book Store");
+Label lb2= new Label("Book Name");
+Label lb3= new Label("MRP");
+Label lb4= new Label("Qty");
+Label lb5= new Label("Total");
+Label lb6= new Label();
+TextField tf1 = new TextField(10);
+TextField tf2 = new TextField(10);
+TextField tf3 = new TextField(10);
+TextField tf4 = new TextField(10);
+Button btn1 = new Button("Bill");
+Button btn2 = new Button("Close");
+GridLayout gdl = new GridLayout(6,2,10,10);
+public void init()
+{
+setLayout(gdl);
+setFont(new Font("Arial Black",Font.BOLD,20));
+add(lb6);add(lb1);
+add(lb2);add(tf1);
+add(lb3);add(tf2);
+add(lb4);add(tf3);
+add(btn1);add(btn2);
+add(lb5);add(tf4);
+btn1.addActionListener(this);
+btn2.addActionListener(this);
+}
+public void actionPerformed(ActionEvent e)
+{
+float p,qty,bill;
+if(e.getSource()==btn1)
+{
+p=Float.parseFloat(tf2.getText());
+qty=Float.parseFloat(tf3.getText());
+bill=p*qty;
+tf4.setText(String.valueOf(bill));
+}
+else if(e.getSource()==btn2)
+System.exit(0);
+}
+}
+/*
+<Applet Code="ShardaBook" Height=300 width=350>
+</Applet>
+*/
+
