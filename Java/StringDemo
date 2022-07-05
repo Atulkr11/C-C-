@@ -1,0 +1,21 @@
+import java.util.*;
+class StringDemo
+{
+public static void main(String k[])
+{
+String[] str=new String[5];
+Scanner in=new Scanner(System.in);
+int i;
+System.out.println("Input names of 5-Students");
+for(i=0;i<=4;i++)
+{
+System.out.print("Name " +(i+1)+":");
+str[i]=in.nextLine();
+}
+System.out.println("List of Names");
+for(i=0;i<=4;i++)
+{
+System.out.println(str[i]);
+}
+}
+}
