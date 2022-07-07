@@ -1,0 +1,20 @@
+import java.awt.*;
+class TextAreaDemo extends Frame
+{
+Label lb=new Label("Comment");
+TextArea ta=new TextArea(5,40);
+TextAreaDemo()
+{
+setLayout(new FlowLayout());
+setFont(new Font("Arial",Font.BOLD,30));
+setBackground(Color.red);
+add(lb);
+add(ta);
+setSize(400,400);
+setVisible(true);
+}
+public static void main(String k[])
+{
+new TextAreaDemo();
+}
+}
