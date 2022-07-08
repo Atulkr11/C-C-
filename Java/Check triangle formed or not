@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Triangle
+{
+public static void main(String k[])
+{
+Scanner in=new Scanner(System.in);
+System.out.print("Input 3 angles of a triangle:");
+int a=in.nextInt();
+int b=in.nextInt();
+int c=in.nextInt();
+if(a+b+c==180)
+System.out.print("Triangle can be formed.");
+else
+System.out.print("Triangle can't be formed.");
+}
+}
