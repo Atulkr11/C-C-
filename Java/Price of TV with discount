@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Tv
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+float p,dis,bill;
+System.out.print("Input price of Tv:");
+p=sc.nextFloat();
+dis=p*10/100;
+bill=p-dis;
+System.out.println("Discount=Rs."+dis);
+System.out.println("Net Bill=Rs."+bill);
+}
+}
